@@ -1,0 +1,25 @@
+# customerid=int(input("Enter customer ID:"))
+# name=input("Enter customer Name:")
+# account_no=int(input("Enter customer Account_no:"))
+# branch=input("Enter Branch name:")
+# iFSC=input("Enter IFSC code:")
+# phone=int(input("Enter customer phone number:"))
+# address=input("Enter customer Address:")
+
+
+# # import sqlite3 as sql
+# # con = sql.connect("Customer.db")
+# # cur = con.cursor()
+# # #cur.execute("create table c_data(c_id int(8),name str,Account_no int(12),Branch str(50),IFSC varchar(15),phone int(10),Address str(50))")
+# # cur.execute("insert into c_data values(?,?,?,?,?,?,?)",(c_id,name,Account_no,Branch,IFSC,phone,address))
+# import mysql.connector
+# mydb = mysql.connector.connect(host="localhost",user="root",password="Prabha@1",database="customers")
+# mycursor = mydb.cursor()
+# #mycursor.execute("create database customers")
+# #mycursor.execute("show databases")
+# #mycursor.execute ("CREATE TABLE Customer(c_id int,name VARCHAR(20),Account_no int,Branch VARCHAR(20),IFSC VARCHAR(20),phone int,Address VARCHAR(50))")
+# #mycursor.execute("INSERT INTO customers values(?,?,?,?,?,?,?)",(c_id,name,Account_no,Branch,IFSC,phone,address))
+# mycursor.execute("""INSERT INTO customers values(customerid,name,account_no,branch,iFSC,phone,address) VALUES (%s, %s, %s, %s, %s, %s, %s)""")
+# mydb.commit()
+# mycursor.close()
+# mydb.close()
